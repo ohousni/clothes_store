@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMIÈRE — Dressed for the Moment</title>
+  <meta name="description" content="LUMIÈRE — Premium women's fashion from Casablanca. Paris meets Morocco. New arrivals every Thursday.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Sans+Arabic:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Splash Screen -->
+<div class="splash" id="splash"><span class="splash-logo">LUMIÈRE</span></div>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#" class="nav-logo">LUMIÈRE</a>
+    <div class="nav-links">
+      <a href="#" class="nav-link" data-i18n="nav_new">NOUVEAUTÉS</a>
+      <a href="#" class="nav-link" data-i18n="nav_clothing">VÊTEMENTS</a>
+      <a href="#" class="nav-link" data-i18n="nav_dresses">ROBES</a>
+      <a href="#" class="nav-link" data-i18n="nav_accessories">ACCESSOIRES</a>
+      <a href="#" class="nav-link" data-i18n="nav_sale">SOLDES</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="ar" onclick="setLanguage('ar')">AR</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+      </div>
+      <button class="nav-icon" id="searchBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="nav-icon" id="cartBtn" style="position:relative"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg><span class="bag-count">2</span></button>
+      <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">&times;</button>
+  <a href="#" class="nav-link" data-i18n="nav_new">NOUVEAUTÉS</a>
+  <a href="#" class="nav-link" data-i18n="nav_clothing">VÊTEMENTS</a>
+  <a href="#" class="nav-link" data-i18n="nav_dresses">ROBES</a>
+  <a href="#" class="nav-link" data-i18n="nav_accessories">ACCESSOIRES</a>
+  <a href="#" class="nav-link" data-i18n="nav_sale">SOLDES</a>
+  <div class="mobile-lang">
+    <button class="lang-btn active" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+    <span class="lang-divider">|</span>
+    <button class="lang-btn" data-lang="ar" onclick="setLanguage('ar')">AR</button>
+    <span class="lang-divider">|</span>
+    <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <canvas id="heroCanvas"></canvas>
+  <img class="hero-model" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=900&q=80" alt="Fashion model">
+  <div class="hero-text">
+    <span class="hero-label" data-i18n="hero_label">Collection PE 2026</span>
+    <h1 class="hero-headline">
+      <span class="hero-line" data-i18n="hero_line1">Habillée</span>
+      <span class="hero-line" data-i18n="hero_line2">pour le</span>
+      <span class="hero-line italic" data-i18n="hero_line3">Moment.</span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero_sub">Nouvelles arrivées, chaque jeudi.</p>
+    <button class="hero-cta" data-i18n="hero_cta">EXPLORER</button>
+  </div>
+  <div class="scroll-indicator"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span class="marquee-text" data-i18n="marquee">Livraison gratuite dès 500 MAD  ·  Nouvelles arrivées chaque jeudi  ·  Les membres économisent 10%  ·  Fabriqué au Maroc  ·</span>
+    <span class="marquee-text" data-i18n="marquee">Livraison gratuite dès 500 MAD  ·  Nouvelles arrivées chaque jeudi  ·  Les membres économisent 10%  ·  Fabriqué au Maroc  ·</span>
+    <span class="marquee-text" data-i18n="marquee">Livraison gratuite dès 500 MAD  ·  Nouvelles arrivées chaque jeudi  ·  Les membres économisent 10%  ·  Fabriqué au Maroc  ·</span>
+    <span class="marquee-text" data-i18n="marquee">Livraison gratuite dès 500 MAD  ·  Nouvelles arrivées chaque jeudi  ·  Les membres économisent 10%  ·  Fabriqué au Maroc  ·</span>
+  </div>
+</div>
+
+<!-- Categories -->
+<section class="section categories-section">
+  <div class="section-inner">
+    <div class="section-header"><h2 class="section-title" data-i18n="section_categories">Acheter par Catégorie</h2></div>
+    <div class="categories-grid">
+      <div class="category-item"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=700&q=80" alt="Dresses"><div class="category-overlay"></div><span class="category-name" data-i18n="cat_dresses">Robes<span class="category-arrow"> →</span></span></div>
+      <div class="category-item"><img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=500&q=80" alt="Tops"><div class="category-overlay"></div><span class="category-name" data-i18n="cat_tops">Hauts<span class="category-arrow"> →</span></span></div>
+      <div class="category-item"><img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=500&q=80" alt="Outerwear"><div class="category-overlay"></div><span class="category-name" data-i18n="cat_outerwear">Manteaux<span class="category-arrow"> →</span></span></div>
+      <div class="category-item"><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500&q=80" alt="Knitwear"><div class="category-overlay"></div><span class="category-name" data-i18n="cat_knitwear">Maille<span class="category-arrow"> →</span></span></div>
+      <div class="category-item"><img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=500&q=80" alt="Accessories"><div class="category-overlay"></div><span class="category-name" data-i18n="cat_accessories">Accessoires<span class="category-arrow"> →</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- New Arrivals -->
+<section class="section arrivals-section" style="background:var(--ivory)">
+  <div class="section-inner">
+    <div class="section-header">
+      <h2 class="section-title no-border" data-i18n="section_new">Cette Semaine</h2>
+      <a href="#" class="view-all" data-i18n="viewall">Tout voir →</a>
+    </div>
+    <div class="products-grid">
+      <div class="product-card tall"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500&q=80" alt="Linen Wrap Dress"><span class="product-tag" data-i18n="tag_new">NOUVEAU</span><button class="product-wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button><div class="size-bubbles"><button class="size-bubble">XS</button><button class="size-bubble">S</button><button class="size-bubble">M</button><button class="size-bubble">L</button><button class="size-bubble">XL</button></div><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p1">Robe Portefeuille en Lin</h3><p class="product-price">890 MAD</p></div></div>
+      <div class="product-card tall"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&q=80" alt="Silk Cami Set"><span class="product-tag" data-i18n="tag_new">NOUVEAU</span><button class="product-wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button><div class="size-bubbles"><button class="size-bubble">XS</button><button class="size-bubble">S</button><button class="size-bubble">M</button><button class="size-bubble">L</button><button class="size-bubble">XL</button></div><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p2">Ensemble Cami en Soie</h3><p class="product-price">1 200 MAD</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?w=500&q=80" alt="Ribbed Knit Top"><button class="product-wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button><div class="size-bubbles"><button class="size-bubble">XS</button><button class="size-bubble">S</button><button class="size-bubble">M</button><button class="size-bubble">L</button><button class="size-bubble">XL</button></div><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p3">Top en Maille Côtelée</h3><p class="product-price">450 MAD</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=500&q=80" alt="Wide Leg Trousers"><button class="product-wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button><div class="size-bubbles"><button class="size-bubble">XS</button><button class="size-bubble">S</button><button class="size-bubble">M</button><button class="size-bubble">L</button><button class="size-bubble">XL</button></div><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p4">Pantalon Large</h3><p class="product-price">720 MAD</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=500&q=80" alt="Blazer Dress"><span class="product-tag" data-i18n="tag_trending">TENDANCE</span><button class="product-wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button><div class="size-bubbles"><button class="size-bubble">XS</button><button class="size-bubble">S</button><button class="size-bubble">M</button><button class="size-bubble">L</button><button class="size-bubble">XL</button></div><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p5">Robe Blazer</h3><p class="product-price">1 450 MAD</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=500&q=80" alt="Floral Midi Dress"><button class="product-wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button><div class="size-bubbles"><button class="size-bubble">XS</button><button class="size-bubble">S</button><button class="size-bubble">M</button><button class="size-bubble">L</button><button class="size-bubble">XL</button></div><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p6">Robe Midi Fleurie</h3><p class="product-price">980 MAD</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Editorial Banner -->
+<div class="editorial-banner">
+  <div class="editorial-content">
+    <p class="editorial-quote">"Style is the answer to everything."</p>
+    <button class="editorial-cta" data-i18n="shop_look">VOIR LE LOOK</button>
+  </div>
+</div>
+
+<!-- Best Sellers -->
+<section class="section bestsellers-section">
+  <div class="section-inner">
+    <div style="margin-bottom:48px"><p class="bestsellers-label" data-i18n="section_bestsellers_label">MEILLEURES VENTES</p><h2 class="bestsellers-title" data-i18n="section_bestsellers_sub">Les pièces que tout le monde porte.</h2></div>
+    <div class="bestsellers-grid">
+      <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?w=500&q=80" alt="Satin Slip Dress"><button class="product-wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button><div class="size-bubbles"><button class="size-bubble">XS</button><button class="size-bubble">S</button><button class="size-bubble">M</button><button class="size-bubble">L</button><button class="size-bubble">XL</button></div><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p7">Robe Slip en Satin</h3><p class="product-price">1 100 MAD</p><p class="product-badge">★ 4.9</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&q=80" alt="Knit Cardigan"><button class="product-wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button><div class="size-bubbles"><button class="size-bubble">XS</button><button class="size-bubble">S</button><button class="size-bubble">M</button><button class="size-bubble">L</button><button class="size-bubble">XL</button></div><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p8">Cardigan Tricoté</h3><p class="product-price">680 MAD</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500&q=80" alt="High Waist Jeans"><button class="product-wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button><div class="size-bubbles"><button class="size-bubble">XS</button><button class="size-bubble">S</button><button class="size-bubble">M</button><button class="size-bubble">L</button><button class="size-bubble">XL</button></div><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p9">Jean Taille Haute</h3><p class="product-price">790 MAD</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1583496661160-fb5218a5dfd6?w=500&q=80" alt="Pleated Midi Skirt"><button class="product-wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button><div class="size-bubbles"><button class="size-bubble">XS</button><button class="size-bubble">S</button><button class="size-bubble">M</button><button class="size-bubble">L</button><button class="size-bubble">XL</button></div><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p10">Jupe Midi Plissée</h3><p class="product-price">620 MAD</p><p class="product-badge">★ 4.8</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=500&q=80" alt="Lace Blouse"><button class="product-wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button><div class="size-bubbles"><button class="size-bubble">XS</button><button class="size-bubble">S</button><button class="size-bubble">M</button><button class="size-bubble">L</button><button class="size-bubble">XL</button></div><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p11">Blouse en Dentelle</h3><p class="product-price">550 MAD</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500&q=80" alt="Cashmere Sweater"><span class="product-tag" data-i18n="tag_low_stock">STOCK LIMITÉ</span><button class="product-wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button><div class="size-bubbles"><button class="size-bubble">XS</button><button class="size-bubble">S</button><button class="size-bubble">M</button><button class="size-bubble">L</button><button class="size-bubble">XL</button></div><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p12">Pull en Cachemire</h3><p class="product-price">1 650 MAD</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?w=500&q=80" alt="Maxi Wrap Skirt"><button class="product-wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button><div class="size-bubbles"><button class="size-bubble">XS</button><button class="size-bubble">S</button><button class="size-bubble">M</button><button class="size-bubble">L</button><button class="size-bubble">XL</button></div><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p13">Jupe Portefeuille Maxi</h3><p class="product-price">740 MAD</p></div></div>
+      <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=500&q=80" alt="Tailored Shorts"><button class="product-wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button><div class="size-bubbles"><button class="size-bubble">XS</button><button class="size-bubble">S</button><button class="size-bubble">M</button><button class="size-bubble">L</button><button class="size-bubble">XL</button></div><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p14">Short Tailleur</h3><p class="product-price">490 MAD</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Sale -->
+<section class="sale-section">
+  <div class="sale-header">
+    <p class="sale-top" data-i18n="section_sale_top">JUSQU'À</p>
+    <h2 class="sale-number" data-i18n="section_sale_num">50% DE RÉDUCTION</h2>
+    <p class="sale-sub" data-i18n="section_sale_sub">Pièces sélectionnées. Durée limitée.</p>
+  </div>
+  <div class="sale-grid">
+    <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=500&q=80" alt="Striped Shirt"><span class="product-tag sale-tag" data-i18n="tag_sale">SOLDE</span><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p15">Chemise Rayée</h3><p class="product-price"><span class="original">520 MAD</span><span class="sale">260 MAD</span></p></div></div>
+    <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1600717535275-0b18ede2f7fc?w=500&q=80" alt="Denim Jacket"><span class="product-tag sale-tag" data-i18n="tag_sale">SOLDE</span><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p16">Veste en Jean</h3><p class="product-price"><span class="original">1 100 MAD</span><span class="sale">550 MAD</span></p></div></div>
+    <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1518895312237-a9e23508077d?w=500&q=80" alt="Floral Blouse"><span class="product-tag sale-tag" data-i18n="tag_sale">SOLDE</span><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p17">Blouse Fleurie</h3><p class="product-price"><span class="original">480 MAD</span><span class="sale">240 MAD</span></p></div></div>
+    <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&q=80" alt="Structured Tote"><span class="product-tag sale-tag" data-i18n="tag_sale">SOLDE</span><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p18">Tote Bag Structuré</h3><p class="product-price"><span class="original">650 MAD</span><span class="sale">325 MAD</span></p></div></div>
+    <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=500&q=80" alt="Trench Coat"><span class="product-tag sale-tag" data-i18n="tag_sale">SOLDE</span><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p19">Trench-Coat</h3><p class="product-price"><span class="original">2 100 MAD</span><span class="sale">1 050 MAD</span></p></div></div>
+    <div class="product-card"><div class="product-img-wrap"><img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=500&q=80" alt="Cropped Leather Jacket"><span class="product-tag sale-tag" data-i18n="tag_sale">SOLDE</span><button class="quick-add" data-i18n="quick_add">AJOUT RAPIDE</button></div><div class="product-info"><h3 class="product-name" data-i18n="p20">Veste en Cuir Courte</h3><p class="product-price"><span class="original">1 890 MAD</span><span class="sale">945 MAD</span></p></div></div>
+  </div>
+</section>
+
+<!-- Instagram -->
+<section class="section instagram-section">
+  <div class="section-inner">
+    <h2 class="instagram-title" data-i18n="section_instagram_title">@lumiere.ma</h2>
+    <p class="instagram-sub" data-i18n="section_instagram_sub">Identifiez-nous pour être mis en avant.</p>
+    <div class="instagram-grid">
+      <div class="insta-item"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&q=80" alt="Instagram 1"><div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2zm-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></div></div>
+      <div class="insta-item"><img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&q=80" alt="Instagram 2"><div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2zm-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></div></div>
+      <div class="insta-item"><img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&q=80" alt="Instagram 3"><div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2zm-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></div></div>
+      <div class="insta-item"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&q=80" alt="Instagram 4"><div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2zm-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></div></div>
+      <div class="insta-item"><img src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?w=400&q=80" alt="Instagram 5"><div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2zm-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></div></div>
+      <div class="insta-item"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&q=80" alt="Instagram 6"><div class="insta-overlay"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2zm-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter">
+  <div class="newsletter-content">
+    <h2 class="newsletter-title" data-i18n="newsletter_title">Soyez la première informée.</h2>
+    <p class="newsletter-sub" data-i18n="newsletter_sub">Nouvelles arrivées, accès exclusif, rien d'autre. Désabonnement à tout moment.</p>
+    <div class="email-row">
+      <input type="email" data-i18n="newsletter_placeholder" placeholder="Votre adresse email">
+      <button data-i18n="newsletter_btn">S'ABONNER</button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand-name">LUMIÈRE</p>
+        <p class="footer-tagline">Dressed for the moment.</p>
+        <p class="footer-location">Casablanca, Morocco 🇲🇦</p>
+      </div>
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer_shop">BOUTIQUE</h4>
+        <a href="#" class="footer-link" data-i18n="footer_new">Nouveautés</a>
+        <a href="#" class="footer-link" data-i18n="footer_dresses">Robes</a>
+        <a href="#" class="footer-link" data-i18n="footer_tops">Hauts</a>
+        <a href="#" class="footer-link" data-i18n="footer_outerwear">Manteaux</a>
+        <a href="#" class="footer-link" data-i18n="footer_accessories">Accessoires</a>
+        <a href="#" class="footer-link" data-i18n="footer_sale">Soldes</a>
+      </div>
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer_help">AIDE</h4>
+        <a href="#" class="footer-link" data-i18n="footer_shipping">Livraison &amp; Retours</a>
+        <a href="#" class="footer-link" data-i18n="footer_size">Guide des Tailles</a>
+        <a href="#" class="footer-link" data-i18n="footer_faq">FAQ</a>
+        <a href="#" class="footer-link" data-i18n="footer_contact">Nous Contacter</a>
+        <a href="#" class="footer-link" data-i18n="footer_stores">Nos Boutiques</a>
+      </div>
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer_follow">SUIVEZ-NOUS</h4>
+        <div class="footer-social">
+          <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2zm-.2 2A3.6 3.6 0 004 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.97a8.35 8.35 0 004.76 1.49V7.01a4.84 4.84 0 01-1-.32z"/></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12a9.97 9.97 0 006.839 9.489c-.075-.672-.144-1.703.031-2.437.158-.661 1.016-4.309 1.016-4.309s-.259-.519-.259-1.285c0-1.203.698-2.102 1.567-2.102.739 0 1.096.555 1.096 1.22 0 .743-.474 1.854-.718 2.884-.204.862.432 1.564 1.282 1.564 1.54 0 2.722-1.624 2.722-3.969 0-2.076-1.492-3.527-3.623-3.527-2.468 0-3.917 1.851-3.917 3.762 0 .745.287 1.544.645 1.978a.26.26 0 01.06.249c-.066.274-.212.862-.241.982-.037.158-.124.192-.287.115-1.071-.499-1.74-2.065-1.74-3.323 0-2.708 1.967-5.195 5.672-5.195 2.978 0 5.292 2.122 5.292 4.957 0 2.958-1.865 5.338-4.456 5.338-.87 0-1.688-.452-1.969-.987l-.535 2.04c-.194.748-.718 1.685-1.069 2.257A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer_copy">© 2026 LUMIÈRE. Tous droits réservés.</span>
+      <span data-i18n="footer_privacy">Politique de Confidentialité · Conditions d'Utilisation</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header"><h3 data-i18n="cart_title">Mon Panier</h3><button class="cart-close" id="cartClose">&times;</button></div>
+  <div class="cart-items">
+    <div class="cart-item"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&q=80" alt="Cart item"><div class="cart-item-info"><p class="cart-item-name" data-i18n="p1">Robe Portefeuille en Lin</p><p class="cart-item-price">890 MAD</p><p class="cart-item-size">M</p><button class="cart-item-remove">Remove</button></div></div>
+    <div class="cart-item"><img src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?w=200&q=80" alt="Cart item"><div class="cart-item-info"><p class="cart-item-name" data-i18n="p7">Robe Slip en Satin</p><p class="cart-item-price">1 100 MAD</p><p class="cart-item-size">S</p><button class="cart-item-remove">Remove</button></div></div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-subtotal"><span data-i18n="cart_subtotal">Sous-total</span><span>1 990 MAD</span></div>
+    <button class="cart-checkout" data-i18n="checkout">PASSER LA COMMANDE</button>
+  </div>
+</div>
+
+<!-- CDN Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
